@@ -1,0 +1,11 @@
+Algoritmo PRACTICA_CONDICIONAL_SI
+	definir  band como real
+	escribir "si eres facilitador escribe 1, en caso contrario escribe 2"
+	leer band
+	si band <2 entonces
+	Escribir "Felicidades! eres el facilitador de tu equipo!"
+	
+siNo
+	escribir "Ya llegara tu turno!"
+		FinSi
+FinAlgoritmo

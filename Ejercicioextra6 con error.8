@@ -1,0 +1,75 @@
+Algoritmo sin_titulo
+	//Una empresa tiene personal de distintas áreas con distintas condiciones de contratación y
+	//formas de pago. El departamento de contabilidad necesita calcular los sueldos semanales
+    //(lunes a viernes) en base a las 3 modalidades de sueldo:
+	//a) comisión
+	//b) salario fijo + comisión, y
+	//c) salario fijo
+	
+	//a) Para la modalidad salario por comisión se debe ingresar el monto total de las ventas
+	//realizadas en la semana, y el 40% de ese monto total corresponde al salario del
+	//empleado.
+	//b) Para la condición de salario fijo + comisión, se debe ingresar el valor que se paga por
+	//hora, la cantidad de horas trabajadas semanalmente y el monto total de las ventas en
+	//esa semana. En este tipo de contrato las horas extras no están contempladas y se fija
+	//como máximo 40 horas por semana. La comisión por las ventas se calcula como 25%
+	//del valor de venta total.
+	//c) Finalmente, para la modalidad de salario fijo se debe ingresar el valor que se paga por
+	//hora y la cantidad de horas trabajadas en la semana. En el caso de exceder las 40
+	//horas semanales, las horas extras se deben pagar con un extra del 50% del valor de la
+	//hora. Realizar un menú de opciones para poder elegir el tipo de contrato que tiene un empleado.
+	
+	Definir contrato Como Caracter
+	Definir ventas como Real
+	Definir hora como real
+	Definir hs_valor como real
+	Escribir "Ingrese el tipo de contrato"
+	Escribir "A - Comisión"
+	Escribir "B - Salario fijo + Comisión"
+	Escribir "C - Salario fijo"
+	Leer contrato
+	
+	Si contrato = "a" o contrato = "A" Entonces 
+		Escribir "El contrato es por comisión"
+		Escribir "Ingrese el monto total de las ventas de la semana"
+		Leer ventas
+		Escribir "El salario es de $" ventas*0.40
+	Sino 
+		Si contrato = "b" o contrato = "B" Entonces
+			Escribir "El contrato es con salario fijo + comisión"
+			Escribir "Ingrese el valor pagado por hora"
+			Leer hs_valor
+			Escribir "Ingrese las horas trabajadas en la semana"
+			Leer hora
+			Si hora <= 40 Entonces Escribir "Ingrese el monto total de las ventas"
+				Leer ventas
+				Escribir " El salario es de $" (hs_valor*hora) + (ventas*0.25)
+				sINO Si hora > 40 Entonces Escribir "No se permiten horas extras en esta modalidad"
+		
+	Sino
+	    Si contrato = "c" o contrato = "C" Entonces
+				Escribir "El contrato es con salario fijo"
+						Escribir "Ingrese el valor pagado por hora"
+						Leer hs_valor
+						Escribir "Ingrese las horas trabajadas en la semana"
+						Leer hora
+						Sino
+						Si hora <= 40 Entonces Escribir "El monto del salario es de $" hora * hs_valor
+						Sino Si hora > 40 Entonces
+							Escribir "El monto total del salario es de $" (40*hs_valor) + ((hora - 40) *1.5)
+							
+						fIN SI
+					FinSi
+						
+					Finsi	
+					FinSi
+				FinSi
+			FinSi
+			
+		
+		
+	FinSi
+	
+	
+	
+FinAlgoritmo

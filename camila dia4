@@ -1,0 +1,10 @@
+Algoritmo sin_titulo
+	Definir letra Como caracter
+	Escribir "Ingrese una letra del alfabeto"
+	leer letra
+	Si letra="a" o letra="e" o letra="i" o letra="o" o letra="u" Entonces
+		Escribir "la letra ingresada es vocal"
+	SiNo
+		Escribir "la letra ingresada es consonante"
+	Fin Si
+finAlgoritmo
