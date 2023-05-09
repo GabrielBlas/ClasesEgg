@@ -1,7 +1,6 @@
 package servicio;
 
 import entidades.Cadena;
-import java.util.Scanner;
 
 public class CadenaServicio {
 
