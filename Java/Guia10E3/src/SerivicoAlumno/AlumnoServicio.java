@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class AlumnoServicio {
 
-    private Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    private ArrayList<Alumno> curso = new ArrayList<>();
+     Scanner leer = new Scanner(System.in).useDelimiter("\n");
+     ArrayList<Alumno> curso = new ArrayList<>();
 
     public Alumno crearAlumno() {
         Alumno a1 = new Alumno();
